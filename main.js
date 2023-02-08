@@ -27,6 +27,12 @@ function hidePassword(){
 function validar() {
 var email= document.getElementById("email").value
 var senha = document.getElementById("password").value
+var nome=document.getElementById("name").value
+
+if(nome.lenght==0){
+    alert("O nome não foi preenchido!");
+    return false;
+}
 
 if (email.length == 0) {
     alert("O email não foi preenchido!");
@@ -38,8 +44,12 @@ if (email.length == 0) {
        //email_erro.innerHTML = "O email não está no formato correto";
        return false;
    }
+}
 
-
+}
+if (senha.lenght==0){
+    alert("A senha não foi preenchida!");
+    return false;
 }
 return true
-}
+
